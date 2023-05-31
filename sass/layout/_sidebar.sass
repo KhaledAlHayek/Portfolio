@@ -1,0 +1,66 @@
+.sidebar
+  position: fixed
+  padding-inline: 4.6rem
+  margin-top: 7.5rem
+  width: 27rem
+  height: calc(100vh - 7.5rem)
+  border-right: $line-dark
+  padding: 5rem 4.6rem
+  text-align: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  gap: 3rem
+  z-index: 101
+  transition: left 400ms cubic-bezier(0.65, 0, 0.35, 1) 200ms
+  @include respond-tablet-lg
+    left: -27rem
+    top: 0
+    background-image: $linear-transparent-small
+    margin-top: 0
+    height: 100vh
+  &__profile
+    width: 11rem
+    height: 11rem
+    align-self: center
+    &-img
+      border-radius: 50%
+      object-fit: cover
+      width: 100%
+      height: 110%
+      display: block  
+      filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, .5)) brightness(1.07)
+  &__social
+    @extend .flex-center
+    gap: 2rem
+  &__name
+    background-image: linear-gradient(to right bottom, $color-primary, #80A8BF)
+    font-size: 2.4rem
+    font-weight: 600
+    line-height: 1.5
+    background-clip: text
+    color: transparent
+  &__contact
+    &:not(:last-child)
+      margin-bottom: 1.5rem
+  &__resume
+    &:hover
+      .sidebar__download-icon
+        fill: $color-white
+      .sidebar__download-text
+        color: $color-white
+  &__download-icon
+    width: 2.5rem
+    height: 2.5rem
+    fill: $color-primary
+  &__download-icon,
+  &__download-text
+    transition: all 100ms cubic-bezier(0.83, 0, 0.17, 1) 150ms
+.sidebar.show-sidebar
+  left: 0
+
+.dark
+  .sidebar
+    &__profile
+      &-img
+        filter: drop-shadow(.5px .5px 4px rgba(255, 255, 255, .5)) brightness(1.07)

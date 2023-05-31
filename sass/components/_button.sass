@@ -1,0 +1,49 @@
+.btn
+  &,
+  &:link,
+  &:visited
+    display: inline-block
+    padding: 1rem 1.5rem 
+    font-size: 1.6rem
+    font-weight: 600
+    background-image: $linear
+    color: $color-white
+    border-radius: 100px
+    cursor: pointer
+    @extend .flex-center
+    gap: 1rem
+  &--outline
+    &:link,
+    &:visited
+      transition: transform 200ms  
+      padding: 1rem 4rem 
+      background: transparent
+      color: $color-primary
+      border: 2px solid currentColor
+      &:hover
+        color: darken($color-primary, 20%)
+        transform: translateY(.6rem)
+      &:active
+        transform: translateY(0)
+  &--flex
+    &:link,
+    &:visited
+      display: flex
+      align-items: center
+      gap: 1rem
+  &--reverse
+    &:link,
+    &:visited
+      background-image: none
+      box-shadow: 0 0 0 2px $color-primary inset
+      color: $color-primary  
+      transition: box-shadow 300ms cubic-bezier(0.83, 0, 0.17, 1)
+      &:hover
+        box-shadow: 0 0 0 100px $color-primary inset
+.dark
+  .btn
+    &--outline
+      &:link,
+      &:visited
+        &:hover
+          color: lighten($color-primary, 20%)

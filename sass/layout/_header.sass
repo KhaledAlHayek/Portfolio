@@ -1,0 +1,109 @@
+.header
+  position: sticky
+  z-index: 99
+  top: 0
+  height: 7.5rem
+  border-bottom: $line-dark
+  flex: 0 1 100%
+  @extend .flex-center-v
+  padding: 0 3rem
+  background-color: rgba(255, 255, 255, .9)
+  @supports (backdrop-filter: blur(5px)) or (-webkit-backdrop-filter: blur(5px))
+    backdrop-filter: blur(5px)
+    background-color: transparent
+  @include respond-tablet-sm
+    padding: 3rem
+    height: auto
+    display: grid
+    place-content: center
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(2, min-content)
+    row-gap: 3rem
+  &__logo
+    @include respond-tablet-lg
+      display: none
+  &__menu
+    display: none
+    cursor: pointer
+    @include respond-tablet-lg
+      display: block
+    &-img
+      width: 3rem
+      @include respond-tablet-sm
+        width: 2rem
+  &__nav
+    margin-left: auto
+    @include respond-tablet-sm
+      grid-column: span 2
+      grid-row: 2 / 3 
+      margin-top: 0.3rem
+      width: 100%
+  &__list
+    @extend .flex-center
+    gap: 4.7rem
+    @include respond-phone
+      flex-wrap: wrap
+      gap: 2rem
+      justify-content: space-around
+  &__item
+    @extend .flex-center-v
+    @include respond-phone
+      width: max-content
+  &__link
+    font-weight: 600
+    font-size: 1.6rem
+    color: $color-primary
+    line-height: 1
+    position: relative
+    &--active
+      color: #0D3074
+      &::before
+        content: ""
+        position: absolute
+        top: calc(100% + 3px)
+        left: 0
+        width: 40%
+        height: 2px
+        background-color: #0D3074
+  &__theme
+    padding: 0 .2rem
+    width: 5.4rem
+    height: 3rem
+    border-radius: 50px
+    border: 2px solid $color-primary
+    cursor: pointer
+    display: flex
+    align-items: center
+    margin-left: 4.7rem
+    @include respond-tablet-sm
+      justify-self: end
+      margin-left: 0
+      height: 2rem
+      width: 4rem
+  &__toggle
+    display: inline-block
+    width: 2.3rem
+    height: 1.8rem
+    border-radius: 50px
+    background-color: $color-primary
+    @include respond-tablet-sm
+      height: 1rem
+      width: 1.8rem
+.header__theme.header__theme--active
+  border-color: $color-primary-light
+  justify-content: flex-end
+  .header__toggle
+    background-color: $color-primary-light
+
+.dark
+  .header
+    backdrop-filter: blur(50px)
+    background-color: rgba(0, 0, 0, .9)
+    @supports (backdrop-filter: blur(50px)) or (-webkit-backdrop-filter: blur(50px))
+      backdrop-filter: blur(50px)
+      background-color: transparent
+    &__link
+      &--active
+        color: #86a6e5
+        &::before
+          background-color: #86a6e5

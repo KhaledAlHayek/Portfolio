@@ -1,0 +1,14 @@
+{
+  "name": "Khaled's Portfolio",
+  "short_name": "Khaled's Portfolio",
+  "description": "Online representation of my work, as well as my skills, education and experience.",
+  "start_url": "https://khaledalhayek.github.io/portfolio_testing/",
+  "background_color": "#ffffff",
+  "theme_color": "#5671A6",
+  "display": "standalone",
+  "scope": "https://khaledalhayek.github.io/portfolio_testing/",
+  "icons": [
+    {"src": "icon512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "icon192.png", "sizes": "192x192", "type": "image/png"}
+  ]
+}

@@ -1,0 +1,93 @@
+.skills
+  text-align: center
+  &__for
+    margin: 4rem 0
+  &__extra-mt
+    margin: 8rem 4rem 4rem
+    @include respond-phone-xsm
+      margin: 8rem 0 4rem
+  &__box
+    @extend .flex-center-h
+    gap: 4rem
+    flex-wrap: wrap
+  &__other
+
+  &__skill
+    flex: 0 1 calc(25% - 4rem)
+    height: 15rem
+    @extend .flex-center-h
+    align-items: flex-end
+    @include respond-phone
+      height: auto
+    @include respond-phone
+      flex: 0 1 calc(50% - 4rem)
+    @include respond-phone-xsm
+      flex: 0 1 100%
+  &__img
+    border-radius: 5px
+  &__progress
+    flex: 0 1 25%
+    text-align: left
+    @include respond-phone
+      flex: 0 1 100%
+    &-img
+      width: 3rem
+      height: 3rem
+    &-box
+      @extend .flex-center-v
+      justify-content: space-between
+      margin-bottom: 0.5rem
+    &-title
+    &-percentage
+      color: $color-accent-light
+    &-bar
+      height: .6rem
+      border-top-left-radius: 100px
+      border-top-right-radius: 100px
+      position: relative
+      z-index: -1
+      overflow: hidden
+      &::before
+        content: ""
+        position: absolute
+        height: 100%
+        top: 0
+        left: 0
+        z-index: 1
+      &--1
+        background-color: #ffc7c7
+        &::before
+          width: 60%
+          background-color: #DE9191
+      &--2
+        background-color: #ffdeae
+        &::before
+          width: 80%
+          background-color: #E1B36D
+      &--3
+        background-color: #655abe
+        &::before
+          width: 80%
+          background-color: #30267E
+
+.dark
+  .skills
+    &__progress
+      &-img
+        filter: invert(1) 
+      &-bar
+        &--1
+          background-color: #ffc7c7
+          &::before
+            width: 60%
+            background-color: #a85e5e
+        &--2
+          background-color: #ffdeae
+          &::before
+            width: 80%
+            background-color: #a57e43
+        &--3
+          background-color: #655abe
+          &::before
+            width: 80%
+            background-color: #150e49

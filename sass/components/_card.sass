@@ -1,0 +1,62 @@
+.card
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 15rem
+  width: 15rem
+  padding: 1rem
+  box-sizing: content-box
+  @include respond-phone
+    width: 100%
+    height: 10rem
+    background-image: $linear-transparent
+    padding: 2rem
+    border-radius: 6px
+  &__icon
+    width: 2.5rem
+  &__icon-sm
+    width: 1.5rem
+  &__side-by-side
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__title
+    width: 3rem
+    @include respond-phone
+      width: max-content
+  &__number
+    font-size: 3rem
+    font-weight: 700
+
+  // card with border
+  &__border
+    border: $line-light
+    width: 20rem
+    height: 15rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    border-radius: 10px
+    @include respond-phone
+      width: 100%
+      height: 10rem
+      background-image: $linear-transparent
+      padding: 2rem
+      border-radius: 6px
+      border: none
+  &__column
+    display: flex
+    flex-direction: column
+    gap: .5rem
+  &__subtitle
+    color: $color-black
+  &__details
+    display: flex
+    align-items: center
+    gap: 1.2rem
+
+.dark
+  .card__subtitle
+    color: $color-white
+  .card__icon
+    filter: brightness(2)

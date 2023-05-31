@@ -1,0 +1,47 @@
+$ff-primary: 'Poppins', sans-serif
+$ff-display: 'Bai Jamjuree', sans-serif
+::selection
+  background-color: $color-primary
+  color: $color-white
+*,
+*::before,
+*::after
+  box-sizing: inherit
+  margin: 0
+  padding: 0
+html
+  box-sizing: border-box
+  font-size: 62.5% // 1rem = 10px
+  @include respond-large
+    font-size: 75% // 1rem = 12px
+  @include respond-tablet-lg
+    font-size: 56.25% // 1rem = 9px
+  @include respond-tablet-sm
+    font-size: 50% // 1rem = 8px
+body
+  font-family: $ff-primary
+  line-height: 1.5
+  color: $color-accent-dark
+  font-weight: 400
+  background-image: url(../assets/bg.webp)
+  background-repeat: no-repeat
+  background-size: cover
+  overflow-x: hidden
+  min-height: 100vh
+body.dark
+  background-image: linear-gradient(rgba($color-black, .9), rgba($color-black, .9)), url(../assets/bg.webp)
+  color: $body-dark-color
+img
+  max-width: 100%
+a
+  text-decoration: none
+  color: inherit
+ul
+  list-style: none
+input,
+button,
+textarea,
+input::placeholder
+  font-family: inherit
+
+ 

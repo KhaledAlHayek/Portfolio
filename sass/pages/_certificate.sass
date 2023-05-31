@@ -1,0 +1,81 @@
+.certificate
+  text-align: center
+  &__gallery
+    margin-top: 4rem
+    display: grid
+    background-color: rgba($color-white, .2)
+    padding: 3rem
+    gap: 2rem
+    grid-template-columns: repeat(16, 1fr)
+    grid-template-rows: repeat(15, 5vw)
+    @include respond-phone
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(5, 1fr)
+  &__gallery-item
+    border-radius: 15px
+    display: block
+    padding: 1rem
+    background-color: rgba($color-white, .4)
+    cursor: pointer
+    transition: all 200ms
+    @include respond-phone
+      pointer-events: none
+    &:hover
+      background-color: rgba($color-white, .6)
+    &--1
+      grid-row: 1 / 5
+      grid-column: 1 / 7
+    &--2
+      grid-row: 5 / 12
+      grid-column: 1 / 17
+    &--3
+      grid-row: 12 / 16
+      grid-column: 1 / 9
+    &--4
+      grid-row: 1 / 5
+      grid-column: 7 / 17
+    &--5
+      grid-row: 12 / 16
+      grid-column: 9 / 17
+    &--1,
+    &--2,
+    &--3,
+    &--4,
+    &--5
+      @include respond-phone
+        grid-column: 1
+    &--1
+      @include respond-phone
+        grid-row: 1
+    &--2
+      @include respond-phone
+        grid-row: 2
+    &--3
+      @include respond-phone
+        grid-row: 3
+    &--4
+      @include respond-phone
+        grid-row: 4
+    &--5
+      @include respond-phone
+        grid-row: 5
+  &__gallery-img
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 5px
+
+.dark
+  .certificate
+    &__gallery
+      background-color: rgba($color-black, .2)
+    &__gallery-item
+      background-color: transparent
+      &:hover
+        background-color: rgba($color-black, .6)
+    &__gallery-img
+      filter: brightness(0.7)
+      &:hover
+        filter: brightness(0.9)
+        

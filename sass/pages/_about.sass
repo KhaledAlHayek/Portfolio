@@ -1,0 +1,32 @@
+.about
+  &__content
+    &:not(:last-child)
+      margin-bottom: 6rem
+  &__header
+    @extend .flex-center-v
+    gap: 2rem
+    @include respond-phone
+      flex-direction: column
+      align-items: flex-start
+      gap: 0
+      margin-bottom: 2rem
+  &__cards
+    display: flex
+    gap: 4.7rem 
+    @include respond-phone
+      gap: 2rem
+      flex-wrap: wrap
+      justify-content: center
+  &__tabs
+    display: flex
+    padding: 1.3rem 0
+    border-bottom: $line-light
+    margin-bottom: 2rem
+    @include respond-phone
+      display: none
+  &__tab
+    flex: 0 1 27rem
+    @extend .flex-center-v
+    gap: 1rem
+    &-heading
+      line-height: 1

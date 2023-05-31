@@ -1,0 +1,21 @@
+.message
+  &__content
+    margin: 0 auto
+    color: $color-black
+    padding-top: 8rem
+    max-width: 60rem
+    font-size: 1.4rem
+    @include respond-tablet-lg
+      padding-top: 5rem
+    @include respond-phone
+      max-width: 100%
+  &__text
+    margin-bottom: 2rem
+    > span
+      font-weight: 500
+    &-lg
+      font-size: 1.6rem
+.dark
+  .message
+    &__content
+      color: $body-dark-color

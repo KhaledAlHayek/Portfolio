@@ -1,0 +1,26 @@
+$desktop: 100em // 1100px
+$tablet-lg: 68.75em // 1100px
+$tablet-sm: 50em // 800px
+$phone: 37.5em // 600px
+$phone-xsm: 25em // 400px
+  
+@mixin respond-tablet-lg
+  @media only screen and (max-width: $tablet-lg)
+    @content
+@mixin respond-tablet-sm
+  @media only screen and (max-width: $tablet-sm)
+    @content
+@mixin respond-phone
+  @media only screen and (max-width: $phone)
+    @content
+@mixin respond-phone-xsm
+  @media only screen and (max-width: $phone-xsm)
+    @content
+
+@mixin bp-custom($bp)
+  @media only screen and (max-width: $bp)
+    @content
+
+@mixin respond-large
+  @media only screen and (min-width: 100em)
+    @content
