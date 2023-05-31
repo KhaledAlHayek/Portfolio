@@ -1,6 +1,7 @@
 # My Portfolio
 
 Welcome to my portfolio repository! This repository showcases my skills, experience, and projects. It serves as a comprehensive overview of my capabilities as a frontend web developer.
+[visit my portfolio website here](https://khaledalhayek.github.io/Portfolio/).
 
 ## Table of Contents
 
@@ -33,10 +34,10 @@ Browse through the various projects within this repository to explore my fronten
 I am currently available for new opportunities and open to discussing potential collaborations. Please feel free to contact me for inquiries or requests.
 
 ## Resume
-To learn more about my professional experience, you can download my resume [here](link-to-resume-file). It provides additional details about my background, education, skills, and previous work experience.
+To learn more about my professional experience, you can download my resume [here](resume/resume.pdf). It provides additional details about my background, education, skills, and previous work experience.
 
 ## Portfolio Website
-To explore my portfolio in an interactive manner, visit my portfolio website [here](link-to-portfolio-website). It offers a visually appealing and user-friendly experience, providing a comprehensive view of my projects and skills.
+To explore my portfolio in an interactive manner, visit my portfolio website [here](https://khaledalhayek.github.io/Portfolio/). It offers a visually appealing and user-friendly experience, providing a comprehensive view of my projects and skills.
 
 ## Progressive Web App
 The portfolio website is developed as a Progressive Web App (PWA), allowing users to install it as an application on their devices. It offers offline access, caching resources to provide a seamless browsing experience even when an internet connection is not available.
