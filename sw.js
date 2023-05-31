@@ -1,5 +1,5 @@
-const staticCache = "Static_Cache-v1";
-const dynamicCache = "Dynamic_Cache-v1";
+const staticCache = "Static_Cache-v2";
+const dynamicCache = "Dynamic_Cache-v2";
 
 const preCachedAssets = [
   "dist/main.css",
